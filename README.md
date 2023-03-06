@@ -8,6 +8,12 @@ For install it:
 php artisan winter: up
 ```
 
+
+
+Photos uploaded to the slider have a handler `resize(2560, 1440, { mode: 'crop', quality: '80' })`
+
+
+
 Also note the `theme.yamle` folder in `themes/superslider`, here is constructor theme.
 
 >Is the code for the backend form builder below.
@@ -90,3 +96,5 @@ form:
                             type: textarea
                             label: Описание
 ```
+ 
+
