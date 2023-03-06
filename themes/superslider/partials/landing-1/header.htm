@@ -1,15 +1,10 @@
-==
-function onStart()
-{
-    $this['backendUrl'] = Backend::url('/');
-}
-==
+== function onStart() { $this['backendUrl'] = Backend::url('/'); } ==
 
 <div class="top-line">
     <a href="/" class="logo">
         <span class="logo__img-wrapper">
             <img
-                src="http://localhost:3000/superslider.loc{{ this.theme.logo_image | media }}"
+                src="{{ this.theme.logo_image | media }}"
                 alt="{{ this.theme.logo_text }}"
                 class="logo__image"
             />
@@ -34,14 +29,11 @@ function onStart()
         <div class="home-aside__decoration"></div>
         <div class="home-aside_soc">
             <div class="home-aside_soc-items">
-              {% for field in this.theme.soc %}
+                {% for field in this.theme.soc %}
                 <a href="{{ field.link }}" class="soc-item" target="_blank">
-                    <img
-                        src="http://localhost:3000/superslider.loc{{field.image | media}}"
-                        alt="Профили компании"
-                    />
+                    <img src="{{field.image | media}}" alt="Профили компании" />
                 </a>
-              {% endfor %}
+                {% endfor %}
             </div>
         </div>
         <div class="home-aside__share-icon"></div>
@@ -49,7 +41,7 @@ function onStart()
     <div class="slider-container">
         <div class="slider-text">
             <div class="swiper-wrapper">
-            {% for field in this.theme.landing_1_slider %}
+                {% for field in this.theme.landing_1_slider %}
                 <div class="swiper-slide slider-text__slide">
                     <div class="slider-text__content">
                         <h2 class="slider-text__heading">
@@ -66,39 +58,36 @@ function onStart()
                         </button>
                     </div>
                 </div>
-            {% endfor %}
+                {% endfor %}
             </div>
         </div>
         <div class="slider-img">
             <div class="swiper-wrapper">
-            {% for field in this.theme.landing_1_slider %}
+                {% for field in this.theme.landing_1_slider %}
                 <div class="swiper-slide slider-img__slider">
                     <div
                         class="slider-img__bg"
                         style="
-                            background-image: url(http://localhost:3000/superslider.loc{{ field.image | media | resize(2560, 1440, { mode: 'crop', quality: '80' }) }});
+                            background-image: url({{ field.image | media | resize(2560, 1440, { mode: 'crop', quality: '80' }) }});
                         "
                         data-swiper-parallax="20%"
                     ></div>
                 </div>
-            {% endfor %}
+                {% endfor %}
             </div>
         </div>
         <div class="slider-bottom">
             <div class="slider-share">
                 <div class="slider-share__items">
-                  {% for field in this.theme.share %}
+                    {% for field in this.theme.share %}
                     <a
                         href="{{ field.link }}"
                         class="soc-item slider-share__item"
                         target="_blank"
                     >
-                        <img
-                            src="http://localhost:3000/superslider.loc{{field.image | media}}"
-                            alt="Поделиться"
-                        />
+                        <img src="{{field.image | media}}" alt="Поделиться" />
                     </a>
-                  {% endfor %}
+                    {% endfor %}
                 </div>
             </div>
             <div class="slider-pagination">
