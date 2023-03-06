@@ -5,7 +5,7 @@ In folder `plugins` you can find usege plug for winter cms
 
 For install it:
 ```shell
-php artisan winter: up
+php artisan winter:up
 ```
 
 
