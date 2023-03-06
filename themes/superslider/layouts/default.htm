@@ -1,0 +1,57 @@
+description = "Default layout"
+
+[genericForm sliderForm]
+group = "Форма слайдера"
+messages_success = "Ваша форма была успешно отправлена!"
+messages_errors = "В вашей заявке содержатся ошибки."
+reset_form = 1
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ this.theme.landing_1_title }}</title>
+        <meta name="description" content="{{ this.theme.landing_1_description }}">
+        <meta name="title" content="{{ this.theme.landing_1_title  }}">
+        <meta name="author" content="Winter CMS">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="generator" content="Winter CMS">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/favicon.png'|theme }}">
+        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/micromodal.css'|theme }}" rel="stylesheet">
+        {% styles %}
+    </head>
+    <body>
+
+        <div id="cursor"></div>
+
+        <!-- Header -->
+        <header class="home-header">
+            {% partial 'landing-1/header' %}
+        </header>
+
+        <!-- modal -->
+        {% partial 'landing-1/modal' %}
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+            {% partial 'site/footer' %}
+        </footer>
+
+
+        <!-- Scripts -->
+        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <script src="{{ 'assets/js/theme.min.js'|theme }}"></script>
+        {% snowboard all %}
+        {% scripts %}
+
+    </body>
+</html>

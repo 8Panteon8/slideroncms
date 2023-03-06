@@ -1,0 +1,28 @@
+// Cursor
+
+#cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: $accent;
+  z-index: 10000;
+  border-radius: 100%;
+  user-select: none;
+  pointer-events: none;
+  margin: -8.5px 0 0 -8.5px;
+  transform: scale(1);
+  transition: transform 0.65s cubic-bezier(0.25, -0.77, 0.79, 1.72),
+    background 0.65s ease-in;
+  &.active {
+    transform: scale(3.4);
+    background-color: rgba(#fff, 0.1);
+    border: 0.1px solid $accent;
+  }
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+#cursor.hidden{
+  transform: scale(.001);
+}

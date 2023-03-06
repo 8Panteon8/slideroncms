@@ -1,0 +1,51 @@
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div
+            class="modal__container"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-1-title"
+        >
+            <header class="modal__header">
+                <h2 class="modal__title" id="modal-1-title">Оставить заявку</h2>
+                <button
+                    class="modal__close"
+                    aria-label="Close modal"
+                    data-micromodal-close
+                ></button>
+            </header>
+            <form data-request="{{ sliderForm }}::onFormSubmit">
+                {{ form_token() }}
+                <div
+                    id="{{ sliderForm }}_forms_flash"
+                    class="popup-form-alert"
+                ></div>
+                <main class="modal__content" id="modal-1-content">
+                    <input
+                        class="form-input modal__input"
+                        type="text"
+                        name="VH-Name"
+                        placeholder="Ваше имя..."
+                    />
+                    <input
+                        class="form-input modal__input"
+                        type="text"
+                        name="VH-Phone"
+                        placeholder="Ваш телефон..."
+                        required
+                    />
+                    <textarea
+                        class="form-input modal__input"
+                        name="Message"
+                        placeholder="Сообщение..."
+                    ></textarea>
+                </main>
+                <footer class="modal__footer">
+                    <button id="{{ sliderForm }}SubmitButton" class="button">
+                        <span class="button__text">Отправить</span>
+                    </button>
+                </footer>
+            </form>
+        </div>
+    </div>
+</div>

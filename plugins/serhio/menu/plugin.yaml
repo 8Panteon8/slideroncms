@@ -1,0 +1,11 @@
+plugin:
+    name: 'serhio.menu::lang.plugin.name'
+    description: 'serhio.menu::lang.plugin.description'
+    author: Serhio
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Лендинг
+        url: /cms/themeoptions/update/superslider
+        icon: icon-ambulance
