@@ -1,4 +1,4 @@
-# Еemplate for landing [slider](https://github.com/8Panteon8/slider) on [Winter cms](https://wintercms.com)
+# Template for landing [slider](https://github.com/8Panteon8/slider) on [Winter cms](https://wintercms.com)
 
 
 In folder `plugins` you can find usege plug for winter cms 
